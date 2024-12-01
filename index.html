@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>An Intro to Glue Work</title>
+    <meta charset="utf-8">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+      .red {color: #db5a70;}
+      .orange {color: #e87e60;}
+      .bone {color: #E6DAC6;}
+      .aqua {color: #63b398;}
+      .teal {color: #0E343E;}
+
+      body { 
+        font-family: 'Fira Sans';
+        background-color: #E6DAC6;
+        color: #0E343E;
+      }
+      
+      h1, h2, h3 {
+        font-family: 'Edu NSW ACT Foundation';
+        font-weight: 500;
+      }
+
+      h2 {
+        color: #72CCAE
+      }
+      h3 {
+        color: #72CCAE
+      }
+
+      .remark-slides-area ol li,
+      .remark-slides-area ul li {
+        margin-top: 1.5em;
+      }
+
+      a {
+        color: #72CCAE;
+      }
+
+      pre {
+        background-color: #c7bca9;
+        padding: 1em;
+      }
+
+      .remark-code,
+      .remark-inline-code {
+        font-family: 'Fira Code';
+      }
+      
+      blockquote {
+        border-left: 0.3em solid #db5a70;
+        padding: 0 15px;
+        color: #e87e60;
+        margin-left: 20px;
+        text-align: left;
+      }
+      
+      .footnote {
+        position: absolute;
+        bottom: 3em;
+        width: 38em;
+      }
+
+      .left {
+        width: 50%;
+        float: left;
+      }
+
+      .right {
+        width: 50%;
+        float: right;
+        text-align: right;
+      }
+      .inverse {
+        background-color: #0E343E;
+        background-image: url("2-2-christmas-lights-free-download-png.png");
+        background-position: top;
+        background-size: 50%;
+        background-repeat: repeat-x;
+        color: #E6DAC6;
+        text-shadow: 0 0 20px #333;
+      }
+      .inverse h1, .inverse h2 {
+        color: #f3f3f3;
+        /* line-height: 0.8em; */
+      }
+      .inverse a {
+        color: #72CCAE;
+      }
+
+      /* Two-column layout */
+      .left-column {
+        color: #72CCAE;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2,
+        .right-column p {
+          display: block;
+          height: 50px;
+          margin-bottom: 50px;
+        }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #0E343E;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+name: Intro
+class: center middle inverse
+
+# An Intro to Glue Work
+
+.footnote[
+  .left[
+    @jadeedward.bsky.social
+  ]
+  .right[
+    https://github.com/jadeedward
+  ]
+]
+
+???
+
+Hi, I'm Jade Edward, I work as a Squad Lead and Senior Back End Engineer at FoodByUs.
+
+Long time meetup attendee, first time speaker.
+
+Many thanks for Max Snow and the sponsors here at Cover Genius for making this a great space to try out my slidedeck!
+
+---
+name: abstract
+class: inverse center middle
+
+Every team has at least one go-to person that gets others out of sticky situations!
+
+Are they being recognised for their contributions to building a cohesive team?
+
+Or are they getting bogged down in work that isn't part of their job description?
+
+Let's get stuck into the concept of glue work, and how it can help your team bond.
+
+
+---
+name: ready
+class: inverse center middle
+
+<img src="ready.gif" />
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWdxcDdiNHdhZWY4eWlxanl5aW5pNnpoaWV4ZnBtNWNtMWt4OWVraSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26ufbRAalKjykigr6/giphy.gif -->
+
+???
+Are you ready for Christmas? Or even for this talk? 
+
+Because this is the PHP/Laravel End of Year Meetup, you're all going to have to suffer through my questionable choice of festive GIFs.
+
+hashtag SorryNotSorry
+
+---
+name: Agenda
+
+## Overview
+
+1. What is glue work?
+2. Where does it happen and where is it needed?
+3. Who should be doing it, and who actually does it?
+4. When does it not work?
+5. Why should we change how it's handled?
+6. How can it be done better?
+
+???
+We're going to go through the what, where, who, when, why, and how of Glue Work.
+
+I know it looks like there are lots of slides, but stick with me, it's quick, I promise!
+
+---
+name: What
+class: inverse center middle
+
+# What is glue work?
+
+<img src="what.gif" />
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExemh0MGp2N3p2YzZhMHA5c3prZTY2c2xoeXV3cDZnazczZ3E4MGc5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ccRMvuh3PeuSGgOWVx/giphy.gif -->
+
+---
+name: What 2
+class: inverse center middle
+
+# What is glue work?
+
+> Glue work is the the less glamorous - and often less-promotable - work that needs to happen to make a team successful.
+
+> Managed deliberately, glue work demonstrates and builds strong technical leadership skills.
+
+> Left unconscious, it can be career limiting.
+
+> It can push people into less technical roles and even out of the industry.
+
+><cite> -- Tanya Reilly "Being Glue" 2019</cite>
+
+???
+This definition comes from Tanya Reilly's 2019 Talk titled "Being Glue"
+
+So what does glue work look like?
+
+---
+## "Technical" Glue Work
+> __technical__: _adjective_ `tek-ni-kəl` <sup>1</sup>
+
+> Having special and usually practical knowledge especially of a mechanical or scientific subject
+
+> <sub>https://merriam-webster.com/dictionary/technical</sub>
+
+
+???
+
+"Technical" glue work looks like things that are done to support software development,
+done by someone having special and usually practical knowledge,
+especially of a mechanical or scientific subject.
+
+--
+- Writing and updating documentation
+
+???
+Documentation
+- Internal API or tool
+- How a package is used or extended
+- Steps to set up a sandbox account with an external platform
+
+--
+- Establishing and implementing coding standards and tools
+
+???
+Standards
+
+--
+- Creating and maintaining automated test suites 
+
+???
+Tests
+
+--
+- Mentoring, coaching, pairing, reviewing, and rubber ducking
+
+???
+
+Mentoring
+
+--
+- Improving processes for efficiency and morale
+
+???
+
+Processes
+- Improving onboarding for new employees
+- Creating information gathering tools for internal feedback or bugs
+---
+## "Soft" Glue Work 
+
+> __soft skills__: _noun_ `ˈsɔːft skɪlz`
+
+> Interpersonal skills such as the ability to communicate well with other people and to work in a team.
+
+> <sub>https://www.collinsdictionary.com/dictionary/english/soft-skills</sub>
+
+
+???
+
+"Soft" glue work helps the people who are writing code to work better, and work better together.
+
+---
+## "Soft" Glue Work 
+
+> __soft skills__: _noun_ `ˈsɔːft skɪlz`
+
+> Interpersonal skills such as the ability to communicate well with other people and to work in a team.
+
+> <sub>https://www.collinsdictionary.com/dictionary/english/soft-skills</sub>
+
+- Facilitating communication between people or teams
+
+???
+Communication
+- Taking notes in meetings and circulating them after
+- Joining in on hallway, desk drive-by, or watercooler discussions
+
+--
+- Sharing knowledge, access to data, writing reports
+???
+Knowledge
+- Historic or contextual knowledge about how/why the company or code have evolved the way they have
+- SQL Queries, spreadsheets, data analysis for other business units
+
+--
+
+- Diversity, Equity, & Inclusion advocacy
+???
+DIE
+- Organising fundraisers and recognition events for causes
+- Facilitating and participating in company support groups or unions
+
+
+--
+
+- Informal mental and emotional support
+
+???
+Support
+- Checking in with colleagues about mood and discussed big life events
+- Providing support for a colleague going through a workplace conflict
+
+---
+name: Where
+class: inverse center middle
+# Where does glue work happen?
+
+<img src="where.gif" />
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHR1dWI3dnhwYmJoNWl5emtyMWU0M2x4NThwdDRyMTNpcnJ3emJ4byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3otPox3PePYUvuYUgw/giphy.gif -->
+
+---
+## Where does glue work occur?
+
+--
+- Everywhere!
+
+--
+- New teams, small teams, startups
+
+???
+New teams may not have quite figured out all the gaps yet.
+Small teams might not have enough people to cover everything.
+Startups might be testing different markets or strategies.
+
+--
+- Large siloed organisations
+
+???
+Business units might not talk to each other.
+There might be administrative or ownership challenges in gaining access or collaborating.
+
+--
+- Dysfunctional organisations 
+
+???
+People might not be as invested in doing a good or thorough job.
+There might be interpersonal conflict, or an every one for themselves attitude.
+Low empathy and psychological safety can mean that people are afraid to raise problems or concerns.
+
+--
+- When there are no specific roles designed to handle it
+
+???
+Missing roles can mean that the work falls to whoever notices or cares enough to get it done.
+
+---
+## Where does glue work emerge from?
+
+--
+- Company expansion and contraction transitions
+  - Hiring, redundancies, restructuring
+???
+During times when people are coming and going, or the shape of the organisation is changing, 
+new gaps in knowledge, communications, and processes can open up.
+Perhaps a larger number of people coming through the hiring pipeline than it's had before.
+
+--
+
+- Team evolution
+  - Promotions, secondments, taking leave, moving on
+???
+At a smaller scale, when people change roles or locations within the organisation, are away, or move on to other opportunities,
+things they used to take care of may fall by the wayside without appropriate handover.
+
+--
+
+- When pivoting or expanding to new domains, markets, or solutions
+???
+When an organisation or project is expanding to new markets or problem spaces, 
+there are always new things to learn about and new people to work with,
+all of which will come with their own flavour of glue work.
+
+---
+name: Who 1
+class: inverse center middle
+
+# Who does glue work?
+
+<img src="who.gif" />
+
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmUwM2Juc2xheGllemtuY3prNGI2aGthcWw3dXB1aGE5Y3E4MmpoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lz4biMQKPRG55crZMJ/giphy.gif -->
+
+---
+name: Who Should
+## Who should be doing it?
+
+--
+- Senior developers
+
+???
+Senior developers
+- Supporting team growth and momentum
+- Adding cross-domain knowledge and experience
+- Opportunity to improve documentation or pair for knowledge sharing
+--
+- Subject matter experts
+
+???
+Subject matter experts
+- Efficiency and effectiveness
+- Time critical situations 
+
+--
+- Technical Leads and Project Managers
+
+???
+Technical Leads and Project Managers
+- People whose core functions involve a lot of this kind of work
+--
+- People who value and benefit from the learning opportunity
+
+???
+Learning Opportunities
+- Exploring more parts of the business
+- Trying out that type of work for a change
+- Developing skills that will be needed for career progression
+
+--
+- When it's distributed fairly - anyone who's capable
+
+???
+
+---
+name: Who Actually
+## Who does it when others don't?
+
+--
+- Junior developers 
+
+???
+Junior developers 
+- Eager to improve their skills and contribute however they can  
+- Have a knack for problem solving
+- Fixing paper cuts or blockages that are stopping them on another task
+- Assigned the work others don't see as valuable, critical, or technical enough for more senior staff
+
+  
+--
+.footnote[
+  <sup>1 https://hbr.org/2018/07/why-women-volunteer-for-tasks-that-dont-lead-to-promotions</sup>
+]
+- Women in a mixed gender workplace <sup>1</sup>
+
+???
+Women in a mixed gender workplace
+- The Harvard Business Review published an article about a 2017 study which found that in the context of the distribution of non-promotable work
+
+
+--
+ - Volunteer 48% more often than men
+???
+- When volunteers are asked for, women volunteer 48% more often than men 
+--
+ - Are asked by managers 44% more often than men
+
+???
+- Women are asked to do that type of work by managers 44% more often than men are asked
+--
+  - Accept a request 76% of the time, compared to men accepting 51%
+???
+- Women will accept a request to do that type of work 76% of the time, compared to men accepting only 51% of the time
+---
+name: When
+class: inverse center middle
+
+# When does glue work not work?
+
+<img src="when.gif" />
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMno5N2Noc254Nno1d2JqNXdzZWhjZGNkbnB0ajdyNnQ1amVmdzh3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Bcph0ICy6UeXBWyo0J/giphy.gif-->
+
+---
+## Glue work can be a problem when...
+
+--
+- It's taken on invisibly
+
+???
+- Higher organisational risk, or "bus factor" if knowledge and processes aren't shared
+
+--
+- It's unfairly allocated
+
+???
+- Sidelined into doing more glue work because they're good at it
+- Reduced capacity for taking on more challenging tasks because of glue workload
+
+--
+- It's not recognised as useful or valuable work
+
+???
+- Negative performance reviews for "not writing enough code", or "not making enough technical contributions"
+
+--
+
+- It gets in the way of other responsibilities
+???
+- Interruptions and task switching prevent deep work and flow states
+- Workload management is harder, as capacity, momentum, and reliability can be affected
+
+--
+
+- It negatively impacts glue workers and their career goals
+
+???
+- Poor work-life balance, burnout
+- Overlooked or denied opportunities for career advancement _(especially when those they've helped get the recognition or promotions instead)_
+- Prevents learning or practicing the skills needed for their main role
+
+---
+name: Why
+class: inverse center middle
+
+# Why do glue work differently?
+
+<img src="why.gif" />
+<!-- https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDY1NHQzcnF0YTFneWFqcG9xbXJuNzV2NjN2d2R6MTVyeGtsb3QzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3orieNRnLjm9DC2Aw0/giphy.gif -->
+ 
+---
+name: Why
+
+## Glue work helps teams stick together when...
+
+--
+- It is recognised as valuable 
+
+--
+- It is shared appropriately among the team
+
+--
+- It is used as opportunity for growth and improvement
+
+--
+- Glue workers are given support, resources, and recognition
+
+--
+- It shines a light on when and where new roles might be needed
+
+???
+Recruiting externally for new hires.
+
+Getting someone experienced in project management or tech leadership can bring experience and expertise to that type of work and more.
+
+Offering internal career pivots, secondments, promotions, or training.
+
+_Only if the glue workers want to take their career in that direction_.
+
+Don't push people where they don't want to go, or where it would be limiting for their career.
+
+---
+name: How
+class: inverse center middle
+# How can it be done better?
+
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnd4ejE2Y2Fkb3RpcXlldGkxcDBxN3A3c2JkazRvMXhlcmk3YmthZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QEdssnG0mqBve4U/giphy.gif" />
+
+---
+
+.left-column[
+## Discover
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+]
+---
+.left-column[
+## Discover
+## Define
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+
+What glue work is being done, why is it being done that way, what need is being met, how long is it taking?
+]
+---
+.left-column[
+## Discover
+## Define
+## Discuss
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+
+What glue work is being done, why is it being done that way, what need is being met, how long is it taking?
+
+Talk about glue work at the time it emerges; and later in retros, 1:1's, and performance reviews
+]
+---
+.left-column[
+## Discover
+## Define
+## Discuss
+## Document
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+
+What glue work is being done, why is it being done that way, what need is being met, how long is it taking?
+
+Talk about glue work at the time it emerges; and later in retros, 1:1's, and performance reviews
+
+Make glue work a part of your workflow - give it tickets, estimates, tracking, planning, and discussions
+]
+---
+.left-column[
+## Discover
+## Define
+## Discuss
+## Document
+## Distribute
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+
+What glue work is being done, why is it being done that way, what need is being met, how long is it taking?
+
+Talk about glue work at the time it emerges; and later in retros, 1:1's, and performance reviews
+
+Make glue work a part of your workflow - give it tickets, estimates, tracking, planning, and discussions
+
+Figure out who should and should not be doing it - consider speed, competency, availability, and opportunities for growth
+]
+---
+.left-column[
+## Discover
+## Define
+## Discuss
+## Document
+## Distribute
+## Dance! 
+]
+.right-column[
+Compare job descriptions with what people actually do each day - personal notes, timesheets, issue notes can help
+
+What glue work is being done, why is it being done that way, what need is being met, how long is it taking?
+
+Talk about glue work at the time it emerges; and later in retros, 1:1's, and performance reviews
+
+Make glue work a part of your workflow - give it tickets, estimates, tracking, planning, and discussions
+
+Figure out who should and should not be doing it - consider speed, competency, availability, and opportunities for growth
+
+Celebrate the glue workers for their contributions, and use glue work to bring your team closer together
+]
+
+---
+name: Dance!
+class: inverse center middle
+
+<img width="50%" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXJvYzFodHhhbTh5Ymd0aTM3MHdzdTB6Yjc1NGQxejl5amg4bGQxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WmkqburJqXziM/giphy.gif" />
+
+---
+name: Credits
+class: inverse
+
+## Credits
+<small>
+- Tanya Reilly "Being Glue"<br>https://www.noidea.dog/glue
+- Denise Yu "Being Glue" Sketchnote https://deniseyu.io/art/sketchnotes/talk-based/tanya-being-glue.png
+- Nathaniel Morihara "Beware of Glue Work"<br>https://nathanielmorihara.medium.com/beware-of-glue-work-5812119a3b02
+- Fellows "A Guide to Understanding Glue Work"<br> https://fellow.app/blog/management/a-guide-to-understanding-glue-work
+- David Hicking "You're a Problem Solver"<br>https://www.youtube.com/watch?v=wSqu8AedcP8
+- Images from <a href="https://giphy.com/">Giphy</a> and <a href="https://freepngimg.com/png/10963-christmas-lights-free-download-png">FreePNGimg.com</a>
+- Slide desk created using Remark https://remarkjs.com
+</small>
+
+.footnote[
+.left[
+  @jadeedward.bsky.social
+]
+.right[
+  https://github.com/jadeedward
+]
+]
+
+   </textarea>
+    <script src="remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
